@@ -37,21 +37,22 @@ app.post("/api/Drives", (req, res) => {
 
     var body = req.body;
     var id_button = parseInt(req.body.id_button);
-    var temperature = parseFloat(Math.random() * 20).toFixed(1);
-
-    console.log(id_button);
-    console.log(temperature);
+    //var temperature = parseFloat(Math.random() * 20).toFixed(1);
+    var temperature = parseFloat(req.body.temperature).toFixed(1);
+    console.log(body);
+    console.log(req.body.temperature);
 
 
     Drives.create(
         {
             id_button: id_button,
-            temperature: temperature
+            temperature: temperature,
+            trigger: true
         }
     ).then(
         () => {
             console.log("Acionamento registrado")
-
+            console.log(req.body.temperature);
         }
     ).then(() => {
         res.sendStatus(200);

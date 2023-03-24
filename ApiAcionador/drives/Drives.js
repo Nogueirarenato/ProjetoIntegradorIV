@@ -13,12 +13,16 @@ const Drives = connection.define('drives', {
     temperature: {
         type: Sequelize.FLOAT,
         allowNull: false
-    }  
+    },
+    trigger :{
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+    } 
     
 })
 
 
-Drives.sync({force: true});
+//Drives.sync({force: true});
 
 module.exports = Drives;
 
