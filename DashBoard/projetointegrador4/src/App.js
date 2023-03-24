@@ -1,13 +1,29 @@
 import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import VerticalBarChart from './Components/verticalBarChart.js';
+import VerticalBarChart2 from './Components/verticalBarChart2.js';
 import PieChart from './Components/pieChart.js';
 import LineChart from './Components/lineChart';
 import faker from 'faker';
 
+
+
+
+
+
 function App() {
+    
   return (
+      
+      
+    
+      
+      
+      
+      
+      
     <div className="App">
       <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Projeto Integrador</a>
@@ -65,12 +81,8 @@ function App() {
           </li>
         </ul>
 
-        <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-          <span>Saved reports</span>
-          <a className="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle" className="align-text-bottom"></span>
-          </a>
-        </h6>
+        
+       
         <ul className="nav flex-column mb-2">
           <li className="nav-item">
             <a className="nav-link" href="#">
@@ -121,7 +133,7 @@ function App() {
       <div style={{display: 'flex'}}>
        <div style={{width: '30vw', weigh: 'auto'}}><PieChart></PieChart></div>
       <div> <div style={{width: '30vw', weigh: 'auto'}}> <VerticalBarChart></VerticalBarChart></div>
-       <div style={{width: '30vw', weigh: 'auto'}}> <VerticalBarChart></VerticalBarChart></div>
+       <div style={{width: '30vw', weigh: 'auto'}}> <VerticalBarChart2></VerticalBarChart2></div>
        </div>
       </div>
       </div>

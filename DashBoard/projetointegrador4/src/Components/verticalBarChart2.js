@@ -34,7 +34,7 @@ export const options = {
     
 };
 
-const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
+const labels = ['Julho', 'Agosto','Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
 export const data = {
   labels,
@@ -57,6 +57,6 @@ export const data = {
   ],
 };
 
-export default function VerticalBarChart() {
+export default function VerticalBarChart2() {
   return <Bar options={options} data={data} />;
 }
