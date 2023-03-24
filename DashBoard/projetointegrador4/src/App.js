@@ -116,12 +116,13 @@ function App() {
       </div>
 
       
-     <div style={{display: 'flex'}}>
-      <div style={{width: '70vw', weigh: 'auto'}}> <LineChart></LineChart></div>
-      <div>
-       <div style={{width: '15vw', weigh: 'auto'}}><PieChart></PieChart></div>
-       <div style={{width: '15vw', weigh: 'auto'}}> <VerticalBarChart></VerticalBarChart></div>
-      
+     <div >
+      <div style={{width: '40vw', weigh: 'auto'}}> <LineChart></LineChart></div>
+      <div style={{display: 'flex'}}>
+       <div style={{width: '30vw', weigh: 'auto'}}><PieChart></PieChart></div>
+      <div> <div style={{width: '30vw', weigh: 'auto'}}> <VerticalBarChart></VerticalBarChart></div>
+       <div style={{width: '30vw', weigh: 'auto'}}> <VerticalBarChart></VerticalBarChart></div>
+       </div>
       </div>
       </div>
       
