@@ -14,7 +14,7 @@ const Drives = connection.define('drives', {
         type: Sequelize.FLOAT,
         allowNull: false
     },
-    trigger :{
+    tgr :{
         type: Sequelize.BOOLEAN,
         allowNull: false
     } 

@@ -47,7 +47,7 @@ app.post("/api/Drives", (req, res) => {
         {
             id_button: id_button,
             temperature: temperature,
-            trigger: true
+            tgr: true
         }
     ).then(
         () => {
