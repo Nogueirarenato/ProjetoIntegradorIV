@@ -6,18 +6,21 @@ import VerticalBarChart from './Components/verticalBarChart.js';
 import VerticalBarChart2 from './Components/verticalBarChart2.js';
 import PieChart from './Components/pieChart.js';
 import LineChart from './Components/lineChart';
+import Url from './Services/httpAPI'
 import faker from 'faker';
+import eventList from './Components/process';
 
 
-
+var list;
 
 
 
 function App() {
-    
+
+
+
+
   return (
-      
-      
     
       
       
