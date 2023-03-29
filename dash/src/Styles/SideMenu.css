@@ -2,7 +2,9 @@
 *{
   margin: 0;
   padding: 0;
-    text-decoration: none;}
+    text-decoration: none;
+  
+  }
 
 .sidebar{
   position: fixed;
@@ -65,7 +67,7 @@ label #btn,label #cancel{
   text-align: center;
   line-height: 45px;
   transition: all .5s ease;
- transform: translate(-50vw)
+
 }
 label #cancel{
   opacity: 0;

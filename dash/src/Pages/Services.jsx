@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import SideMenu from '../Components/SideMenu'
 
 const Services= () => {
     return (
         <div>
-            <h1>Serviços</h1>
-            <Link to="/">retornar a página inicial</Link>
+            <h1>Servicos</h1>
+            <SideMenu></SideMenu>
         </div>
     );
 }

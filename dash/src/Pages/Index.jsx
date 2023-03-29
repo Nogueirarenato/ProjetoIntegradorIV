@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import SideMenu from '../Components/SideMenu';
 
 const DashBoard= () => {
     return (
+ 
         <div>
-            <h1>DashBoard</h1>
-            <Link to="/">retornar a página inicial</Link>
+            <h1>Bashboard</h1>
+            <SideMenu></SideMenu>
         </div>
+        
     );
 }
 
