@@ -1,13 +1,21 @@
+import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import SideMenu from '../Components/SideMenu'
+import SideMenu from '../Components/SideMenu';
+import '../Styles/Index.css';
 
-const Temperature= () => {
+const Temperatures= () => {
     return (
+ 
         <div>
-            <h1>Temperatura</h1>
-            <SideMenu></SideMenu>
+           <div className='index'>
+           <div className='sideMenu'> <SideMenu></SideMenu></div>
+            <div className='container'>
+            <h1>Temperaturas</h1>
+            </div>
+            </div>
         </div>
+        
     );
 }
 
-export default Temperature;
+export default Temperatures;

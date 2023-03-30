@@ -1,13 +1,20 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import SideMenu from '../Components/SideMenu'
+import SideMenu from '../Components/SideMenu';
+import '../Styles/Index.css';
 
-const About = () => {
+const About= () => {
     return (
+ 
         <div>
-        <h1>Sobre nós</h1>
-        <SideMenu></SideMenu>
-    </div>
+           <div className='index'>
+           <div className='sideMenu'> <SideMenu></SideMenu></div>
+            <div className='container'>
+            <h1>Sobre Nós</h1>
+            </div>
+            </div>
+        </div>
+        
     );
 }
 

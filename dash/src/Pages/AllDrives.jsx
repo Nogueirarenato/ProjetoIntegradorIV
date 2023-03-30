@@ -1,14 +1,21 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import SideMenu from '../Components/SideMenu'
+import SideMenu from '../Components/SideMenu';
+import '../Styles/Index.css';
 
-const Drives = () => {
+const AllDrives= () => {
     return (
+ 
         <div>
-        <h1>Todos Acionamentos</h1>
-        <SideMenu></SideMenu>
-    </div>
+           <div className='index'>
+           <div className='sideMenu'> <SideMenu></SideMenu></div>
+            <div className='container'>
+            <h1>Todos os Acionamentos</h1>
+            </div>
+            </div>
+        </div>
+        
     );
 }
 
-export default Drives;
+export default AllDrives;

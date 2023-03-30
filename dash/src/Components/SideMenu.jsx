@@ -10,10 +10,10 @@ import '../Styles/SideMenu.css'
    
 
           <div>
-    <input type="checkbox" id="check"></input>
+    <input type="checkbox" id="check" checked></input>
     <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
+      <i class="fas fa-bars" id="btn" style={{display: 'none'}}></i>
+      <i class="fas fa-times" id="cancel" style={{display: 'none'}}> </i>
     </label>   
     <div class="sidebar">
       <header>Grupo 01</header>
