@@ -154,9 +154,9 @@ const DoughnutChart = () => {
         datasets: [{
             label: 'Quantidade de Acionamentos dispositivo 1 ',
             data:  [
-                ((janeiro1 + 1) / 2+ (fevereiro1 + 1) / 2+ (marco1 + 1) / 2+ (abril1 + 1) / 2+ (maio1 + 1) / 2+ (junho1 + 1) / 2+ (julho1 + 1) / 2+ (agosto1 + 1) / 2+ (setembro1 + 1) / 2+ (outubro1 + 1) / 2+ (novembro1 + 1) / 2+ (dezembro1 + 1) / 2),
-                ((janeiro2 + 1) / 2+ (fevereiro2 + 1) / 2+ (marco2 + 1) / 2+ (abril2 + 1) / 2+ (maio2 + 1) / 2+ (junho2 + 1) / 2+ (julho2 + 1) / 2+ (agosto2 + 1) / 2+ (setembro2 + 1) / 2+ (outubro2 + 1) / 2+ (novembro2 + 1) / 2+ (dezembro2 + 1) / 2),
-                ((janeiro3 + 1) / 2+ (fevereiro3 + 1) / 2+ (marco3 + 1) / 2+ (abril3 + 1) / 2+ (maio3 + 1) / 2+ (junho3 + 1) / 2+ (julho3 + 1) / 2+ (agosto3 + 1) / 2+ (setembro3 + 1) / 2+ (outubro3 + 1) / 2+ (novembro3 + 1) / 2+ (dezembro3 + 1) / 2),],
+                ((janeiro1 )+ (fevereiro1 )+ (marco1 )+ (abril1 )+ (maio1 )+ (junho1 )+ (julho1 )+ (agosto1 )+ (setembro1 )+ (outubro1 )+ (novembro1 )+ (dezembro1 )),
+                ((janeiro2 )+ (fevereiro2 )+ (marco2 )+ (abril2 )+ (maio2 )+ (junho2 )+ (julho2 )+ (agosto2 )+ (setembro2 )+ (outubro2 )+ (novembro2 )+ (dezembro2 )),
+                ((janeiro3 )+ (fevereiro3 )+ (marco3 )+ (abril3 )+ (maio3 )+ (junho3 )+ (julho3 )+ (agosto3 )+ (setembro3 )+ (outubro3 )+ (novembro3 )+ (dezembro3 )),],
                 
                 
             backgroundColor: [
