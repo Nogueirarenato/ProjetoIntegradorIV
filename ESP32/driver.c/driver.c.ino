@@ -18,7 +18,7 @@ String serverName = "http://apirenatonogueira.kinghost.net:21041/api/Drives";
 int NAO_CONECTADO = 14;
 int CONECTADO = 26;
 int ENVIANDO_REQUISICAO = 33;
-int SUCESSO = 34;
+int SUCESSO = 13;
 int FALHA = 12;
 int SENSOR = 25; 
 int BOTAO = 32;
@@ -64,18 +64,18 @@ void loop()
 {
     if (WiFi.status() != WL_CONNECTED)
     {
-        digitalWrite(14, HIGH);
+        digitalWrite(NAO_CONECTADO, HIGH);
+        digitalWrite(CONECTADO, LOW);
     }
     else
     {
-        digitalWrite(14, LOW);
+        digitalWrite(NAO_CONECTADO, LOW);
+        digitalWrite(CONECTADO, HIGH);
     }
 
-    if (digitalRead(32) == HIGH)
+    if (digitalRead(BOTAO) == HIGH)
     { // Se o botão for acionado
-        digitalWrite(26, HIGH);
-        delay(1000);
-        digitalWrite(26, LOW);
+        digitalWrite(ENVIANDO_REQUISICAO, HIGH);
         HTTPClient http;
         float temp = dht.readTemperature();
         delay(2000);
@@ -86,100 +86,28 @@ void loop()
         String toSend = "{\"id_button\": " + ID_DISPOSITIVO + ",  \"temperature\": \""+ TEMPERATURE + "\"}";
         int httpResponse = http.POST(toSend.c_str());
         delay(2000);
-        if (httpResponse > 0)
+        if (httpResponse == 200)
         {
-            
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(26, HIGH);
-            delay(100);
-            digitalWrite(26, LOW);
-            delay(100);
+            delay(1000);
+            digitalWrite(ENVIANDO_REQUISICAO, LOW);
+            for(int cont=0; cont <= 50; cont++){
+              digitalWrite(SUCESSO, HIGH);
+              delay(500);
+              digitalWrite(SUCESSO, LOW);
+              delay(500);
+            }
         }
         else
         {
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
-            digitalWrite(14, HIGH);
-            delay(100);
-            digitalWrite(14, LOW);
-            delay(100);
+           delay(1000);
+            digitalWrite(ENVIANDO_REQUISICAO, LOW);
+            for(int cont2=0; cont2 <= 50; cont2++){
+              digitalWrite(FALHA, HIGH);
+              delay(500);
+              digitalWrite(FALHA, LOW);
+              delay(500);
+            }
+           
         }
 
         http.end();
