@@ -22,7 +22,7 @@ const Drives = connection.define('drives', {
 })
 
 
-//Drives.sync({force: true});
+Drives.sync({force: true});
 
 module.exports = Drives;
 
