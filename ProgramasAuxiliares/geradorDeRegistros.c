@@ -15,12 +15,12 @@ int segundo;
 
  printf("INSERT INTO drives(id_button, temperature, tgr, createdAt, updatedAt) VALUES (1, 2.0, true, '2023-10-6 8:19:25', '2023-10-6 8:19:25'),");
 
-while(maximo<= 3557){
+while(maximo<= 2900){
 
     botao = 1+rand()%3;
     temperatura = 1+ rand()%10;
     //mes = 1+rand()%5;
-    mes= 5;
+    mes= 6;
     dia= 1+rand()%28;
     hora= 1+rand()%23;
     minuto= 1+ rand()%59;
